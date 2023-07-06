@@ -33,17 +33,13 @@ Console.Write("Введите количество строк: ");
 int a = int.Parse(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
 int b = int.Parse(Console.ReadLine());
-Random rand = new Random();
 
 int[,] Matr = new int [a, b];
 FillArray(Matr);
 PrintArray(Matr);
 
-Console.Write("Введите номер строки: ");
-int rownumber = int.Parse(Console.ReadLine());
-Console.Write("Введите номер столбца: ");
-int columnnumber = int.Parse(Console.ReadLine());
-
+void FindElement (int rownumber, int columnnumber)
+{
 if (rownumber <= a && rownumber > 0
     && columnnumber <= b && columnnumber > 0)
     {
@@ -53,5 +49,13 @@ else
 {
     Console.WriteLine("Такого элемента в массиве нет");
 }
+}
+
+Console.Write("Введите номер строки: ");
+int row = int.Parse(Console.ReadLine());
+Console.Write("Введите номер столбца: ");
+int column = int.Parse(Console.ReadLine());
+
+FindElement(row, column);
 
 
